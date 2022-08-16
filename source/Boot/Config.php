@@ -13,8 +13,8 @@ define("CONF_DB_NAME", "arrecada");
 /**
  * PROJECT URLs
  */
-define("CONF_URL_BASE", "http://www.localhost/turim/turim-crud");
-define("CONF_URL_TEST", "http://www.localhost/turim/turim-crud");
+define("CONF_URL_BASE", "http://www.localhost");
+define("CONF_URL_TEST", "http://www.localhost");
 
 /**
  * SITE

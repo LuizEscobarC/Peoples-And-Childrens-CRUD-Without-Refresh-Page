@@ -4,19 +4,6 @@ namespace Source\App;
 
 use Source\Core\Controller;
 use Source\Core\View;
-use Source\Models\Auth;
-use Source\Models\CashFlow;
-use Source\Models\Center;
-use Source\Models\Hour;
-use Source\Models\Lists;
-use Source\Models\Moviment;
-use Source\Models\SelfList;
-use Source\Models\Store;
-use Source\Models\User;
-use Source\Support\HourManager;
-use Source\Support\Message;
-use Source\Support\Pager;
-
 /**
  * CLASSE FILHA DO CONTROLLADOR
  */

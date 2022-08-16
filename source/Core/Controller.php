@@ -2,11 +2,6 @@
 
 namespace Source\Core;
 
-use avadim\FastExcelReader\Excel;
-use Shuchkin\SimpleXLS;
-use Source\Models\Lists;
-use Source\Support\Message;
-use Source\Support\SeoBuilder;
 
 /**
  * CLASSE CONTROLADORA
@@ -18,9 +13,6 @@ class Controller
     /** @var View */
     protected $view;
 
-    /** @var Message */
-    protected $message;
-
     protected $response;
 
     /**
@@ -30,7 +22,6 @@ class Controller
     public function __construct(string $pathToViews = null)
     {
         $this->view = new View($pathToViews);
-        $this->message = new Message();
     }
 
     /**

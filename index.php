@@ -18,6 +18,8 @@ $route->namespace("Source\App");
  */
 $route->group(null);
 $route->get("/", "App:home");
+$route->post("/salvar", "App:create");
+$route->post("/ler", "App:read");
 
 /**
  * APP
