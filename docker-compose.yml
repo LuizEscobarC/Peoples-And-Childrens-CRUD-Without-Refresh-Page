@@ -1,0 +1,33 @@
+version: "3"
+services:
+  arrecadacaodb:
+    hostname: arrecadacao
+    image: mariadb
+    container_name: arrecadacao-db-container
+    networks:
+      - backend
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: arrecadacao
+      MYSQL_USER: root
+      MYSQL_PASSWORD: toor
+    volumes:
+      - ./../db/:/var/lib/mysql
+    ports:
+      - 7000:3306
+  web:
+    hostname: arrecadacao-server
+    build: .
+    container_name: php-arrecadacao-container
+    networks:
+      - backend
+      - frontend
+    depends_on:
+      - arrecadacaodb
+    volumes:
+      - . :/var/www/html
+    ports:
+      - 80:80
+networks:
+  backend:
+  frontend:
