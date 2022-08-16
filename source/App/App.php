@@ -18,8 +18,7 @@ use Source\Support\Message;
 use Source\Support\Pager;
 
 /**
- * Class App
- * @package Source\App
+ * CLASSE FILHA DO CONTROLLADOR
  */
 class App extends Controller
 {

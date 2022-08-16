@@ -9,10 +9,9 @@ use Source\Support\Message;
 use Source\Support\SeoBuilder;
 
 /**
- * FSPHP | Class Controller
+ * CLASSE CONTROLADORA
  *
- * @author Robson V. Leite <cursos@upinside.com.br>
- * @package Source\Core
+ * @author Luiz Paulo Escobal
  */
 class Controller
 {

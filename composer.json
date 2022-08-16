@@ -23,7 +23,7 @@
     ]
   },
   "require": {
-    "php": "^7.0",
+    "php": "^7.2",
     "ext-pdo": "^7.1",
     "league/plates": "v4.0.0-alpha",
     "coffeecode/paginator": "^1.0",

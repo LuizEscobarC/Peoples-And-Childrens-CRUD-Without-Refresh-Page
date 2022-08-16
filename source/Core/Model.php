@@ -5,10 +5,9 @@ namespace Source\Core;
 use Source\Support\Message;
 
 /**
- * FSPHP | Class Model Layer Supertype Pattern
+ * CLASSE MODELO [ Layer Supertype Pattern ]
  *
- * @author Robson V. Leite <cursos@upinside.com.br>
- * @package Source\Models
+ * @author Luiz Paulo Escobal
  */
 abstract class Model
 {
