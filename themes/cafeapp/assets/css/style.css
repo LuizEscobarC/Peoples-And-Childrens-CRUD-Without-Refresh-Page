@@ -1,0 +1,126 @@
+body {
+    margin: 0 5px;
+    max-width: 1300px;
+    display: flex;
+}
+
+form {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+}
+
+/* HEADER E BOTOES */
+.container_main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 5px;
+    min-height: 250px;
+}
+
+.container_main > header {
+    flex-basis: 100%;
+
+}
+
+.container_main .input_name {
+    flex-basis: 100%;
+    margin-top: 10px;
+}
+
+.container_main .container_people > header {
+    flex-basis: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.container_main .container_people > header h1 {
+    flex-basis: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 20px;
+    background: var(--cinza-higher);
+}
+
+/* PESSOAS */
+.container_main .container_people {
+    flex-basis: calc(40% - 60px);
+    justify-content: space-around;
+}
+
+.container_main .container_people > header {
+    flex-basis: calc(60% - 2.5px);
+    display: flex;
+}
+
+.container_main .container_people .people {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.container_main .container_people .people > header {
+    flex-basis: 75%;
+    background: var(--cinza-medium);
+    text-align: left;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.container_main .container_people .btn {
+    flex-basis: calc(20% - 2.5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cinza-medium);
+}
+
+.container_main .container_people .btn button {
+    margin: 5px;
+}
+
+/* FILHOS */
+.container_main .container_people .children {
+    flex-basis: 100%;
+}
+
+.container_main .container_people .children {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.container_main .container_people .children > header {
+    flex-basis: 75%;
+    background: var(--cinza-lower);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 0 5px;
+}
+
+.container_main .container_people .children .btn {
+    background: var(--cinza-lower);
+}
+
+.container_main .container_people .button_add_people {
+    flex-basis: 100%;
+    max-width: 50%;
+    margin-top: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.container_main textarea {
+    flex-basis: calc(60% - 60px);
+    margin: 30px 20px;
+}
