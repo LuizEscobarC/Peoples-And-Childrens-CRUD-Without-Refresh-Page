@@ -4,8 +4,8 @@
         <section class="container_main">
             <!--||||||||||||||||| HEADER ||||||||||||||||||| -->
             <header>
-                <button class="saveAll">Gravar</button>
-                <button class="readAll">Ler</button>
+                <button class="save submit" data-url="<?= url('/gravar') ?>" data-method="POST">Gravar</button>
+                <button class="read submit" data-url="<?= url('/ler') ?>" data-method="GET">Ler</button>
                 <div class="input_name">
                     <label for="name">Nome:</label>
                     <input id="name" type="text" name="name">
@@ -19,7 +19,7 @@
                 </header>
             </article>
             <!--||||||||||||||||| TEXT AREA ||||||||||||||||||| -->
-            <textarea name="dataJson" class="textContainer" cols="70" rows="35">
+            <textarea name="dataJson" readonly="readonly" class="textContainer" cols="70" rows="35">
 {
         "pessoas": []
 }

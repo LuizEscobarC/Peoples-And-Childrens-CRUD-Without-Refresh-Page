@@ -5,7 +5,6 @@ require __DIR__ . "/vendor/autoload.php";
 /**
  * BOOTSTRAP
  */
-
 use CoffeeCode\Router\Router;
 use Source\Core\Session;
 
@@ -18,8 +17,8 @@ $route->namespace("Source\App");
  */
 $route->group(null);
 $route->get("/", "App:home");
-$route->post("/salvar", "App:create");
-$route->post("/ler", "App:read");
+$route->post("/gravar", "App:create");
+$route->get("/ler", "App:read");
 
 /**
  * APP

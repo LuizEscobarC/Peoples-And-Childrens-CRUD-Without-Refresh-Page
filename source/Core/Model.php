@@ -2,8 +2,6 @@
 
 namespace Source\Core;
 
-use Source\Support\Message;
-
 /**
  * CLASSE MODELO [ Layer Supertype Pattern ]
  *
@@ -17,7 +15,7 @@ abstract class Model
     /** @var \PDOException|null */
     protected $fail;
 
-    /** @var Message|null */
+    /** @var string|null */
     protected $message;
 
     /** @var string */
@@ -56,7 +54,7 @@ abstract class Model
         $this->protected = array_merge($protected, ['created_at', "updated_at"]);
         $this->required = $required;
 
-        $this->message = new Message();
+        $this->message = '';
     }
 
     /**
@@ -115,9 +113,9 @@ abstract class Model
     }
 
     /**
-     * @return Message|null
+     * @return string|null
      */
-    public function message(): ?Message
+    public function message(): ?string
     {
         return $this->message;
     }
@@ -293,7 +291,7 @@ abstract class Model
     {
 
         if (!$this->required()) {
-            $this->message->warning("Preencha todos os campos para continuar");
+            $this->message = "Preencha todos os campos para continuar";
             return false;
         }
 
@@ -303,7 +301,7 @@ abstract class Model
             $id = $this->id;
             $this->update($this->safe(), "id = :id", "id={$id}");
             if ($this->fail()) {
-                $this->message->error("Erro ao atualizar, verifique os dados");
+                $this->message = "Erro ao atualizar, verifique os dados";
                 return false;
             }
         }
@@ -312,7 +310,7 @@ abstract class Model
         if (empty($this->id)) {
             $id = $this->create($this->safe());
             if ($this->fail()) {
-                $this->message->error("Erro ao cadastrar, verifique os dados");
+                $this->message = "Erro ao cadastrar, verifique os dados";
                 return false;
             }
         }
@@ -355,6 +353,11 @@ abstract class Model
 
         $destroy = $this->delete("id = :id", "id={$this->id}");
         return $destroy;
+    }
+
+    public function destroyAll()
+    {
+        return $this->delete('1=1', '');
     }
 
     /**

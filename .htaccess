@@ -5,13 +5,13 @@ RewriteEngine On
 Options All -Indexes
 
 # ROUTER WWW Redirect.
-# RewriteCond %{HTTP_HOST} !^www\. [NC]
-# RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+ RewriteCond %{HTTP_HOST} !^www\. [NC]
+ RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # ROUTER URL Rewrite
 # if dont been a file or directory
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 # all URI will redirected to index.php with the $_GET route
-RewriteRule ^(.*)$ index.php?route=/$1
+RewriteRule ^(.*)$ index.php?route=/$1 [L,QSA]
 

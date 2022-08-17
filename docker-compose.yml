@@ -8,7 +8,7 @@ services:
       - backend
     environment:
       MYSQL_ROOT_PASSWORD: toor
-      MYSQL_DATABASE: arrecadacao
+      MYSQL_DATABASE: turim
       MYSQL_USER: root
       MYSQL_PASSWORD: toor
     volumes:

@@ -20,11 +20,11 @@ form {
     flex-wrap: wrap;
     margin: 5px 5px;
     min-height: 250px;
+    align-items: start;
 }
 
 .container_main > header {
     flex-basis: 100%;
-
 }
 
 .container_main .input_name {
@@ -50,20 +50,23 @@ form {
 /* PESSOAS */
 .container_main .container_people {
     flex-basis: calc(40% - 60px);
-    justify-content: space-around;
+    display: flex;
+    justify-content: normal;
+    align-items: self-start;
+    flex-wrap: wrap;
 }
 
 .container_main .container_people > header {
-    flex-basis: calc(60% - 2.5px);
-    display: flex;
+    flex-basis: calc(100%);
+    display: inline;
 }
 
 .container_main .container_people .people {
-    display: flex;
     flex-basis: 100%;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .container_main .container_people .people > header {
@@ -71,11 +74,10 @@ form {
     background: var(--cinza-medium);
     text-align: left;
     padding: 10px;
-    margin: 0 5px;
 }
 
 .container_main .container_people .btn {
-    flex-basis: calc(20% - 2.5px);
+    flex-basis: 20%;
     display: flex;
     justify-content: center;
     align-items: center;

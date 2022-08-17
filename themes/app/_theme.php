@@ -10,6 +10,6 @@
 <body>
     <?= $v->section("content"); ?>
 
-    <script src="<?= theme('/assets/js/scripts.js', CONF_VIEW_APP)?>"></script>
+    <script type="module" src="<?= theme('/assets/js/scripts.js', CONF_VIEW_APP)?>"></script>
 </body>
 </html>

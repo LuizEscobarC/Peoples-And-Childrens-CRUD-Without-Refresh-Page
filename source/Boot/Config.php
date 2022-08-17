@@ -3,11 +3,10 @@
 /**
  * DATABASE
  */
-
-define("CONF_DB_HOST", "arrecada.mysql.dbaas.com.br");
-define("CONF_DB_USER", "arrecada");
-define("CONF_DB_PASS", "ArrecadacaoDB");
-define("CONF_DB_NAME", "arrecada");
+define("CONF_DB_HOST", "arrecadacao");
+define("CONF_DB_USER", "root");
+define("CONF_DB_PASS", "toor");
+define("CONF_DB_NAME", "turim");
 
 
 /**
@@ -52,7 +51,6 @@ define("CONF_MESSAGE_ERROR", "error icon-warning");
 /**
  * VIEW
  */
-define("CONF_VIEW_PATH", __DIR__ . "/../../shared/views");
 define("CONF_VIEW_EXT", "php");
 define("CONF_VIEW_THEME", "cafeweb");
 define("CONF_VIEW_APP", "app");
