@@ -47,7 +47,7 @@ class App extends Controller
         foreach ($peoples as $people) {
 
             // REALIZA AS REGRAS DE NEGÓCIO DE CADASTRO DE PESSOAS E FILHOS
-            $response = (new People())->peopleSaver($people);
+            $response = (new People())->storePeople($people);
 
             // SE FOR UMA INSTANCIA DEU ULGUM ERRO AO SALVAR
             if ($response instanceof Model) {

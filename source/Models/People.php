@@ -63,7 +63,7 @@ class People extends Model
      * @param $people
      * @return bool|Children|People
      */
-    public function peopleSaver($people)
+    public function storePeople($people)
     {
         // FILTRA CONTRA SCRIPTS
         $people = $this->filter($people);
