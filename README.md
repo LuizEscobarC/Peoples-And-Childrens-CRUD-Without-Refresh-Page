@@ -4,13 +4,16 @@ link repositório: https://github.com/LuizEscobarC/crud-turim
 ## Caso você queira analisar o projeto em sua maquina, siga este passo a passo de instalação com DOCKER: 😁
 
 
-<h3>Dependências</h3>
+<h3>Dependências / Tecnologias</h3>
 
 ```
 PHP 7.2
 Composer
 Docker
 linux
+VanillaJS
+CSS3
+HMTL5
 ```
 
 <p>Componentes utilizados:</p>
