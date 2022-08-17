@@ -12,6 +12,12 @@ Composer
 Docker
 linux
 ```
+<p>Componentes utilizados:</p>
+
+<small>
+* League Plates - View Engine.
+* CoffeeCode - Router.
+</small>
 
 ### Clone o repositório😎
 
