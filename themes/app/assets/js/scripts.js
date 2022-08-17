@@ -41,9 +41,12 @@ document.addEventListener('click', (e) => {
 
     // BEGIN ADD PEOPLE
     if (clicked.classList.contains('includePeople')) {
-        let name = document.querySelector('#name').value;
+        let inputName = document.querySelector('#name');
+        let name = inputName.value;
 
         saveAndVerifyPeopleName(objectPeoples, name);
+
+        inputName.value = '';
 
         buildFrontByJson(objectPeoples)
     }
@@ -179,15 +182,14 @@ function saveAndVerifyPeopleName(objectPeoples, name) {
     // VERIFICA SE JÁ EXISTE ESSE CADASTRO DE PESSOA
     let isRepeated = isRepeatedPeople(objectPeoples, name);
 
+    if (isEmptyName(name)) {
+        alert('Digite um nome de pessoa válido.')
+        return;
+    }
 
     // ADICIONA PESSOA SE EXISTIR
     if (isRepeated) {
         alert('Você já cadastrou essa pessoa, por favor digite outro nome.')
-        return;
-    }
-
-    if (isEmptyName(name)) {
-        alert('Digite um nome de pessoa válido.')
         return;
     }
 
