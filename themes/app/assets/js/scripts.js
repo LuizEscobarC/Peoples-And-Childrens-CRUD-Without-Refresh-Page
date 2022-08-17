@@ -194,8 +194,7 @@ function saveAndVerifyPeopleName(objectPeoples, name) {
     }
 
     objectPeoples.pessoas.push({
-        'nome': name,
-        'filhos': []
+        'nome': name, 'filhos': []
     });
 }
 
@@ -258,9 +257,7 @@ function isEmptyName(name) {
  */
 const ajax = async (url, data, method, contentType) => {
     const callback = await fetch(url, {
-        method: method,
-        body: data,
-        headers: {
+        method: method, body: data, headers: {
             'Content-Type': contentType
         }
     });
