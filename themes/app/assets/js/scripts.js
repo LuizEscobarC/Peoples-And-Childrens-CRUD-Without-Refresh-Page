@@ -29,6 +29,9 @@ let childrenNode = `
 // END HTML VAR HANDLES
 
 // BEGIN EVENTS FRONTEND
+/**
+ * EVENTO RESPONSÁVEL POR CAPTURAR TODOS OS CLIQUES DA PAGINA E CENTRALIZAR
+ */
 document.addEventListener('click', (e) => {
     // PEGA O JSON ARMAZENADO NO DOM
     let objectPeoples = JSON.parse(textAreaContainer.textContent)
@@ -128,6 +131,7 @@ document.addEventListener('click', (e) => {
 // BEGIN FUNCTIONS
 /**
  * FUNÇÃO RESPONSÁVEL POR CONTRUIR OS CONTAINERS DE PESSOAS E FILHOS APARTIR DO JSON ARMAZENADO NO DOM
+ * @param objectJson
  */
 const buildFrontByJson = (objectJson) => {
     let peoplesToAddAtContainer = '';
@@ -160,7 +164,7 @@ const buildFrontByJson = (objectJson) => {
 /**
  * FUNÇÃO RESPONSÁVEL POR LIMPAR O ANTIGO ESTADO DOS NÓS DE PESSOAS ADICIONADAS
  */
-const clearPeopleScreen = () => {
+function clearPeopleScreen() {
     // LIMPANDO O FRONTEND
     const peopleNodes = document.querySelectorAll('.people');
     peopleNodes.forEach(people => people.remove());
@@ -168,6 +172,8 @@ const clearPeopleScreen = () => {
 
 /**
  * FUNÇÃO RESPONSÁVEL POR SALVAR OS DADOS NO JSON SE FOR VÁLIDO
+ * @param objectPeoples
+ * @param name
  */
 function saveAndVerifyPeopleName(objectPeoples, name) {
     // VERIFICA SE JÁ EXISTE ESSE CADASTRO DE PESSOA
@@ -214,6 +220,9 @@ function saveAndVerifyChildrenName(objectPeoples, childrenName, parentName) {
 
 /**
  * FUNÇÃO RESPONSÁVEL POR VERIFICAR SE A PESSOA JÁ EXISTE NO JSON
+ * @param objectPeoples
+ * @param name
+ * @returns {boolean}
  */
 function isRepeatedPeople(objectPeoples, name) {
     let verifyPeople = false;
@@ -227,6 +236,8 @@ function isRepeatedPeople(objectPeoples, name) {
 
 /**
  * FUNÇÃO RESPONSÁVEL POR VERIFICAR SE O NOME É VÁZIO
+ * @param name
+ * @returns {boolean}
  */
 function isEmptyName(name) {
     return (name.length <= 0);
@@ -235,6 +246,14 @@ function isEmptyName(name) {
 //END FUNCTIONS
 
 // BEGIN AJAX FETCH
+/**
+ * FUNÇÃO RESPONSÁVEL POR FAZER AS REQUISIÇÕES AJAX COM A API FETCH NATIVA
+ * @param url
+ * @param data
+ * @param method
+ * @param contentType
+ * @returns {Promise<any>}
+ */
 const ajax = async (url, data, method, contentType) => {
     const callback = await fetch(url, {
         method: method,

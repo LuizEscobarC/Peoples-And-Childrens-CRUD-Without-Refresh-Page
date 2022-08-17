@@ -4,6 +4,9 @@ namespace Source\Models;
 
 use Source\Core\Model;
 
+/**
+ * MODEL FILHO
+ */
 class Children extends Model
 {
     public function __construct()

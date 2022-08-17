@@ -5,6 +5,9 @@ namespace Source\Models;
 use MongoDB\BSON\ObjectId;
 use Source\Core\Model;
 
+/**
+ * MODEL PESSOA
+ */
 class People extends Model
 {
     public function __construct()
@@ -12,6 +15,10 @@ class People extends Model
         parent::__construct('people', ['id'], ['name']);
     }
 
+    /**
+     * MÉTODO RESPONSÁVEL POR RETORNAR TODOS AS PESSOAS E O VINCULOS FILHOS
+     * @return array
+     */
     public function findAll()
     {
         $peoplesArray = [];
@@ -29,6 +36,10 @@ class People extends Model
         return $peoplesArray;
     }
 
+    /**
+     * MÉTODO RESPONSÁVEL POR BUILDAR E RETORNAR OS FILHOS
+     * @return array|null
+     */
     public function childrens()
     {
         if (!empty($this->id)) {
@@ -47,6 +58,11 @@ class People extends Model
         return null;
     }
 
+    /**
+     * MÉTODO RESPONSÁVEL POR FAZER TODA A REGRA DE NÉGÓCIO DE CADASTRO
+     * @param $people
+     * @return bool|Children|People
+     */
     public function peopleSaver($people)
     {
         // FILTRA CONTRA SCRIPTS
@@ -73,6 +89,11 @@ class People extends Model
         return true;
     }
 
+    /**
+     * MÉTODO RESPONSÁVEL POR FILTRAS OS DADOS DA PESSOA
+     * @param object $people
+     * @return object
+     */
     public function filter(object $people)
     {
         $people->nome = filter_var($people->nome, FILTER_SANITIZE_STRIPPED);

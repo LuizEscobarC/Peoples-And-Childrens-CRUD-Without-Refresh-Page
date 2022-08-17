@@ -59,6 +59,9 @@ class App extends Controller
         $this->call(200)->back(['message' => 'Pessoas cadastradas com sucesso!']);
     }
 
+    /**
+     * READ PEOPLE
+     */
     public function read()
     {
         $peoples = (new People())->findAll();
