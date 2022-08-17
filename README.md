@@ -13,11 +13,10 @@ Docker
 linux
 ```
 <p>Componentes utilizados:</p>
-
-<small>
-* League Plates - View Engine.
-* CoffeeCode - Router.
-</small>
+``` 
+ League Plates - View Engine.
+ CoffeeCode - Router.
+```
 
 ### Clone o repositório😎
 
