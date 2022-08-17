@@ -60,8 +60,12 @@ nano <pasta que clonou>\crud-turim\source\Boot\Config.php
 ```
 ![image](https://user-images.githubusercontent.com/54407649/185025169-e2ba57cc-2d01-4b69-9f40-3285eb599102.png)
 
+### Acesse a url http://www.localhost/:
+![image](https://user-images.githubusercontent.com/54407649/185027620-e19d00dd-4b3c-45c8-837c-f9888b60febb.png)
+
 
 ## Imagens do projeto 💻
 
-#### Dashboard coma  apresentação de um grafico realtime, onde se há um lançamento, no mesmo segundo se movimenta.
-<img style="width: 600px; height: 300px" src="https://user-images.githubusercontent.com/54407649/161637293-7018eba8-b4d2-4c73-8d8f-14bf22d5f7d2.png">
+![image](https://user-images.githubusercontent.com/54407649/185027757-992172bb-6705-4c96-a28c-a650d247d77b.png)
+
+
