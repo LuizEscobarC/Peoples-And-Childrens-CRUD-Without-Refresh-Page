@@ -12,7 +12,9 @@ Composer
 Docker
 linux
 ```
+
 <p>Componentes utilizados:</p>
+
 ``` 
  League Plates - View Engine.
  CoffeeCode - Router.
